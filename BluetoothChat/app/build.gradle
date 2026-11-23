@@ -1,0 +1,26 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.btchat'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.btchat.localchat"
+        minSdk 19            // Android 4.4 KitKat
+        targetSdk 33
+        versionCode 1
+        versionName "0.1"
+    }
+    buildTypes {
+        release { minifyEnabled false }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        encoding 'UTF-8'
+    }
+    lint { abortOnError false }
+}
+// בכוונה: אין תלויות חיצוניות כלל, ואין הרשאת INTERNET.
